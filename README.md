@@ -68,6 +68,7 @@ CREATE TABLE livro(
     FOREING KEY(id_assunto) REFERENCES assunto (id_assunto)
 );
 ```
+<<<<<<< HEAD
 
 #### 1.6 Criando uma tabela EXTRA
 A tabela EXTRA vai servir para exemplificar a exclusão
@@ -88,3 +89,5 @@ ALTER TABLE autor
 ADD COLUMN email VARCHAR(100);
 ```
 
+=======
+>>>>>>> 4a98eb9aa0994f9ee55d0775ab882003d595e584
