@@ -25,13 +25,13 @@ Este guia será dividido em etapas para demonstrar desde a criação de tabelas,
 ## Passo 1: criação do Banco de Dados e das Tabelas
 #### 1.1 Criando o DB (Banco de Dados)
 
-```
+```SQL
 CREATE DATABASE biblioteca;
 USE biblioteca;
 ```
 
 #### 1.2 Criando a tabela 'editora'
-```
+```SQL
 CREATE TABLE editora (
     id_editora INT PRIMARY KEY AUTO_INCREMENT,
     nome_editora VARCHAR(100) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE editora (
 
 #### 1.3 Criando a teabela 'autor'
 
-```
+```SQL
 CREATE TABLE autor (
     id_autor INT PRIMARY KEY AUTO_INCREMENT,
     nome_autor VARCHAR(200)
@@ -50,7 +50,7 @@ CREATE TABLE autor (
 ```
 
 #### 1.4 Criando a tabela 'assunto'
-```
+```SQL
 CREATE TABLE assunto (
     id_assunto INT PRIMARY KEY AUTO_INCREMENT,
     descricao_assunto VARCHAR(500) NOT NULL
@@ -58,7 +58,7 @@ CREATE TABLE assunto (
 ```
 
 #### 1.5 Criando a tabela 'livro'
-```
+```SQL
   CREATE TABLE livro(
     id_livro INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR (150) NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE assunto (
 
 #### 1.6 Criando uma tabela EXTRA
 A tabela EXTRA vai servir para exemplificar a exclusão
-```
+```SQL
 CREATE TABLE extra(
     id INT PRIMARY KEY AUTO_INCREMENT,
     produtos VARCHAR(50),
@@ -83,20 +83,6 @@ CREATE TABLE extra(
 );
 ```
 
-<<<<<<< HEAD
-=======
-#### 1.6 Criando uma tabela EXTRA
-A tabela EXTRA vai servir para exemplificar a exclusão
-```
-CREATE TABLE extra(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    produtos VARCHAR(50),
-    quantidade INT (20),
-    preco DOUBLE NOT NULL
-);
-```
-
->>>>>>> abad03f94b3a9ab2c24a7ff1503edb2cb9b8bc82
 ## Passo 2: editar tabelas usando 'ALTER'
 Após a criação da tabela, podemos adicionar novos campos. Vamos adicionar uma coluna 'email' na ta tabela 'autor'
 
@@ -104,7 +90,6 @@ Após a criação da tabela, podemos adicionar novos campos. Vamos adicionar uma
 ALTER TABLE autor
 ADD COLUMN email VARCHAR(100);
 ```
-<<<<<<< HEAD
 
 ### Passo 3:Remover tabela usando 'DROP'
 Se precisar remover uma tabela usamos o comando 'DROP'. Neste exemplo vamos remover a tabela 'EXTRA'.
@@ -177,7 +162,7 @@ Para isso usamos o comando 'SELECT'
 
 #### Passo 7.1:Selecionar todos os livros com suas editoras e autores
 Vamos usar dados das tabelas 'livros', 'editora', 'autor' e ' assunto' usando o comando 'JOIN'
-### Passo 7:Excluido os dados usando 'DELETE'
+### Passo 8:Excluido os dados usando 'DELETE'
 Para remover os registros de uma tabela usamos o comando 'DELETE'.
 Vamos excluir o livro Memorias Postumas de Bras cubas'.
 
@@ -192,7 +177,3 @@ JOIN editora ON livro.editora = editora.id_editora
 JOIN autor ON livro.autor = autor.id_autor
 JOIN assunto ON livro.assunto =  assunto.id_assunto;
 ```
-
-
-=======
->>>>>>> abad03f94b3a9ab2c24a7ff1503edb2cb9b8bc82
