@@ -83,6 +83,20 @@ CREATE TABLE extra(
 );
 ```
 
+<<<<<<< HEAD
+=======
+#### 1.6 Criando uma tabela EXTRA
+A tabela EXTRA vai servir para exemplificar a exclusão
+```
+CREATE TABLE extra(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    produtos VARCHAR(50),
+    quantidade INT (20),
+    preco DOUBLE NOT NULL
+);
+```
+
+>>>>>>> abad03f94b3a9ab2c24a7ff1503edb2cb9b8bc82
 ## Passo 2: editar tabelas usando 'ALTER'
 Após a criação da tabela, podemos adicionar novos campos. Vamos adicionar uma coluna 'email' na ta tabela 'autor'
 
@@ -90,6 +104,7 @@ Após a criação da tabela, podemos adicionar novos campos. Vamos adicionar uma
 ALTER TABLE autor
 ADD COLUMN email VARCHAR(100);
 ```
+<<<<<<< HEAD
 
 ### Passo 3:Remover tabela usando 'DROP'
 Se precisar remover uma tabela usamos o comando 'DROP'. Neste exemplo vamos remover a tabela 'EXTRA'.
@@ -179,3 +194,5 @@ JOIN assunto ON livro.assunto =  assunto.id_assunto;
 ```
 
 
+=======
+>>>>>>> abad03f94b3a9ab2c24a7ff1503edb2cb9b8bc82
